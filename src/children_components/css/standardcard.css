@@ -1,23 +1,23 @@
-.impModCard {
+.standard-card {
   height: 90px;
   border: 1px solid black;
 }
 
-.impModCard-top {
+.standard-card-top {
   background-color: rgb(1,63,78);
   height: 45px;
   padding-top: 10px;
 }
 
-.impModCard-title {
+.standard-card-title {
   color: white;
   font-size: 12pt;
 }
 
-.impModCard-bottom {
+.standard-card-bottom {
   padding-top: 10px;
 }
 
-.impModCard-text{
+.standard-card-text{
   font-weight: bold;
 }
