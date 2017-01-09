@@ -1,0 +1,19 @@
+header {
+  height: 90px;
+  width: 100%;
+  background-color: rgb(1,63,78);
+  display: flex;
+}
+
+.logo {
+  height: 80px;
+  margin-top: 8px;
+  margin-left: 175px;
+}
+
+.title {
+  font-size: 46pt;
+  margin-left: 15px;
+  color: #00AB8E;
+  top: 20px;
+}
