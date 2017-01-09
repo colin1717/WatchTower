@@ -5,8 +5,8 @@
 
 .standard-card-top {
   background-color: rgb(1,63,78);
-  height: 40px;
-  padding-top: 10px;
+  height: 35px;
+  padding-top: 7px;
 }
 
 .standard-card-title {
@@ -16,7 +16,7 @@
 }
 
 .standard-card-bottom {
-  padding-top: 14px;
+  padding-top: 16px;
 }
 
 .standard-card-text{
