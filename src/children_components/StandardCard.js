@@ -9,6 +9,7 @@ class ImplementationModCard extends Component {
           <div className='standard-card'>
             <div className='standard-card-top'>
               <span className='standard-card-title'>{this.props.title}</span>
+              <span className='icon'><i className="material-icons">done</i></span>
             </div>
             <div className='standard-card-bottom'>
               <span className='standard-card-text'>{this.props.text}</span>

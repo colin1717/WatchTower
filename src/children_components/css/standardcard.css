@@ -5,19 +5,26 @@
 
 .standard-card-top {
   background-color: rgb(1,63,78);
-  height: 45px;
+  height: 40px;
   padding-top: 10px;
 }
 
 .standard-card-title {
   color: white;
   font-size: 12pt;
+  margin-left: 46px;
 }
 
 .standard-card-bottom {
-  padding-top: 10px;
+  padding-top: 14px;
 }
 
 .standard-card-text{
   font-weight: bold;
+}
+
+.icon {
+  color: #00AB8E;
+  float: right;
+  margin-right: 15px;
 }
