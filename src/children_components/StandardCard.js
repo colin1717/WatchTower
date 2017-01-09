@@ -5,7 +5,7 @@ class ImplementationModCard extends Component {
   render() {
 
     return (
-      <div className="row">
+      <div>
           <div className='standard-card'>
             <div className='standard-card-top'>
               <span className='standard-card-title'>{this.props.title}</span>
