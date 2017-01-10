@@ -13,8 +13,25 @@ class App extends Component {
     $.ajax({
       method: "GET",
       url: `http://127.0.0.1:8000/clients/${client}`,
-      success: (data) => {console.log(`data: ${data}`)}
+      success: (data) => { this._sortData(data) }
     })
+  }
+
+  _sortData(data) {
+    console.log('sortData is running');
+    let sortedData = {};
+
+    sortedData["Last Modified"] = this._findImplementation(data);
+
+    console.log(sortedData);
+  }
+
+  _findImplementation(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title == "Last Modified") {
+        return data[i];
+      }
+    }
   }
 
   render() {
