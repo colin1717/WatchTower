@@ -6,7 +6,7 @@ class ClientDropdown extends Component {
 
     return (
       <div className="row">
-        <div className="col s12 search-bar z-depth-3">
+        <div className="col s12 search-bar z-depth-1">
           <div className="row">
             <div className="col m2"></div>
             <form onSubmit={ this._handleSubmit.bind(this) }>
