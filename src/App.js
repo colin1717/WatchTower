@@ -22,14 +22,57 @@ class App extends Component {
     let sortedData = {};
 
     sortedData["Last Modified"] = this._findImplementation(data);
+    sortedData["Production Container URL"] = this._findProdContainerPage(data);
+    sortedData["Staging Container URL"] = this._findStagingContainerPage(data);
+    sortedData["Javascript URL"] = this._findBVLoader(data);
+    sortedData["BVRRSummary Container Loading"] = this._findBVLoader(data);
+    sortedData["BVRRSummary Container Has Content"] = this._findBVRRSummaryPopulating(data);
 
     console.log(sortedData);
   }
 
   _findImplementation(data) {
     for (var i = 0; i < data.length; i++) {
-      if (data[i].title == "Last Modified") {
+      if (data[i].title === "Last Modified") {
         return data[i];
+      }
+    }
+  }
+  _findProdContainerPage(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "Production Container URL"){
+        return data[i];
+      }
+    }
+  }
+  _findStagingContainerPage(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "Staging Container URL") {
+        return data[i];
+      }
+    }
+  }
+
+  _findBVLoader(data) {
+    for (var i = 0; i < data.length; i++)  {
+      if (data[i].title === "Javascript URL") {
+        return data[i];
+      }
+    }
+  }
+
+  _findBVRRSummary(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "BVRRSummary Container Loading") {
+        return data[i];
+      }
+    }
+  }
+
+  _findBVRRSummaryPopulating(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title ==="BVRRSummary Container Has Content") {
+        return data[i].status;
       }
     }
   }
