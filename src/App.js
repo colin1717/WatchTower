@@ -25,8 +25,14 @@ class App extends Component {
     sortedData["Production Container URL"] = this._findProdContainerPage(data);
     sortedData["Staging Container URL"] = this._findStagingContainerPage(data);
     sortedData["Javascript URL"] = this._findBVLoader(data);
-    sortedData["BVRRSummary Container Loading"] = this._findBVLoader(data);
+    sortedData["BVRRSummary Container Loading"] = this._findBVRRSummary(data);
     sortedData["BVRRSummary Container Has Content"] = this._findBVRRSummaryPopulating(data);
+    sortedData["BVRR Container Loading"] = this._findBVRR(data);
+    sortedData["BVRR Container Has Content"] = this._findBVRRPopulating(data);
+    sortedData["BVQA Container Loading"] = this._findBVQA(data);
+    sortedData["BVQA Container Has Content"] = this._findBVQAPopulating(data);
+    sortedData["SEO Content Loading"] = this._findSEO(data);
+    sortedData["SEO Pagination Working"] = this._findSEOPagination(data);
 
     console.log(sortedData);
   }
@@ -64,14 +70,62 @@ class App extends Component {
   _findBVRRSummary(data) {
     for (var i = 0; i < data.length; i++) {
       if (data[i].title === "BVRRSummary Container Loading") {
-        return data[i];
+        return data[i].status;
       }
     }
   }
 
   _findBVRRSummaryPopulating(data) {
     for (var i = 0; i < data.length; i++) {
-      if (data[i].title ==="BVRRSummary Container Has Content") {
+      if (data[i].title === "BVRRSummary Container Has Content") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findBVRR(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "BVRR Container Loading") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findBVRRPopulating(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "BVRR Container Has Content") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findBVQA(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "BVQA Container Loading") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findBVQAPopulating(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "BVQA Container Has Content") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findSEO(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "SEO Content Loading") {
+        return data[i].status;
+      }
+    }
+  }
+
+  _findSEOPagination(data) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].title === "SEO Pagination Working") {
         return data[i].status;
       }
     }
