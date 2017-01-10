@@ -41,7 +41,7 @@ class App extends Component {
         <div className="row">
           <div className="col s1"></div>
           <div className="col s10">
-            <StandardCard title='Implementation Last Modified' text='2017-01-10T00:39:48.074+0000'/>
+            <StandardCard title='Implementation Last Modified' text={this.state.data["Last Modified"] ? this.state.data["Last Modified"].msg : " "}/>
           </div>
           <div className="col s1"></div>
         </div>
@@ -49,10 +49,10 @@ class App extends Component {
         { /* Container Page Cards */ }
         <div className='row'>
           <div className='col s6'>
-            <StandardCard title="Staging Container Page" text="https://display.ugc.bazaarvoice.com/bvstaging/static/Apples/ApplesCRM/en_US/container.htm?" />
+            <StandardCard title="Staging Container Page" text={this.state.data["Staging Container URL"] ? this.state.data["Staging Container URL"].msg : " "} />
           </div>
           <div className='col s6'>
-            <StandardCard title="Production Container Page" text="https://display.ugc.bazaarvoice.com/static/Apples/ApplesCRM/en_US/container.htm?" />
+            <StandardCard title="Production Container Page" text={this.state.data["Production Container URL"] ? this.state.data["Staging Container URL"].msg : " "} />
           </div>
         </div>
 
@@ -60,7 +60,7 @@ class App extends Component {
         <div className='row'>
         <div className="col s1"></div>
         <div className="col s10">
-          <StandardCard title='BV Loader' text='https://display.ugc.bazaarvoice.com/bvstaging/static/ClientName/en_US/bvapi.js'/>
+          <StandardCard title='BV Loader' text={this.state.data["Javascript URL"] ? this.state.data["Javascript URL"].msg : " "}/>
         </div>
         <div className="col s1"></div>
         </div>
@@ -68,13 +68,13 @@ class App extends Component {
         { /* PDP Cards */ }
         <div className="row">
           <div className="col s4">
-            <StandardCard title="BVRRSummary" text="Injected Content Detected"/>
+            <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Loading"] ? "BVSummary Div Detected" : " "}/>
           </div>
           <div className="col s4">
-            <StandardCard title="BVRR" text="Injected Content Detected"/>
+            <StandardCard title="BVRR" text={this.state.data["BVRR Container Loading"] ? "BVRR Div Detected" : " "}/>
           </div>
           <div className="col s4">
-            <StandardCard title="BVQA" text="Injected Content Detected"/>
+            <StandardCard title="BVQA" text={this.state.data["BVQA Container Loading"] ? "BVQA Div Detected" : " "}/>
           </div>
         </div>
 
@@ -82,7 +82,7 @@ class App extends Component {
         <div className='row'>
           <div className='col s3'></div>
           <div className='col s6'>
-            <StandardCard title="BV SEO" text="Pagination Detected"/>
+            <StandardCard title="BV SEO" text={this.state.data["SEO Content Loading"] ? "SEO Content Loading" : " "} />
           </div>
           <div className='col s3'></div>
         </div>
