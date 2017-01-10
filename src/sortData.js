@@ -16,6 +16,7 @@ export function sortData(data) {
   sortedData["SEO Pagination Working"] = this.findSEOPagination(data);
 
   console.log(sortedData);
+  return sortedData;
 }
 
 export function findImplementation(data) {
