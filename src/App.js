@@ -3,13 +3,25 @@ import Header from './children_components/Header.js';
 import ClientDropdown from './children_components/ClientDropdown.js';
 import StandardCard from './children_components/StandardCard.js';
 import './App.css';
+import $ from 'jquery';
 
 class App extends Component {
+
+  _fetchData(client) {
+    console.log(`client: ${client}`)
+
+    $.ajax({
+      method: "GET",
+      url: `http://127.0.0.1:8000/clients/${client}`,
+      success: (data) => {console.log(`data: ${data}`)}
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-        <ClientDropdown />
+        <ClientDropdown fetchData={this._fetchData.bind(this)}/>
 
         { /* Implementation Card */ }
         <div className="row">

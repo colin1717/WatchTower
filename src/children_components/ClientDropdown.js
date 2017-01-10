@@ -28,7 +28,6 @@ class ClientDropdown extends Component {
     event.preventDefault();
 
     let client = this._client.value;
-
     this.props.fetchData(client);
   }
 }
