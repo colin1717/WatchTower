@@ -39,6 +39,18 @@ class App extends Component {
         <div className="col s1"></div>
         </div>
 
+        { /* PDP Cards */ }
+        <div className="row">
+          <div className="col s4">
+            <StandardCard title="BVRRSummary" text="Injected Content Detected"/>
+          </div>
+          <div className="col s4">
+            <StandardCard title="BVRR" text="Injected Content Detected"/>
+          </div>
+          <div className="col s4">
+            <StandardCard title="BVQA" text="Injected Content Detected"/>
+          </div>
+        </div>
       </div>
     );
   }
