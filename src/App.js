@@ -15,7 +15,7 @@ class App extends Component {
         <div className="row">
           <div className="col s1"></div>
           <div className="col s10">
-            <StandardCard title='Implementation' text='blah'/>
+            <StandardCard title='Implementation Last Modified' text='some date'/>
           </div>
           <div className="col s1"></div>
         </div>
@@ -51,6 +51,16 @@ class App extends Component {
             <StandardCard title="BVQA" text="Injected Content Detected"/>
           </div>
         </div>
+
+        { /* SEO Card */ }
+        <div className='row'>
+          <div className='col s3'></div>
+          <div className='col s6'>
+            <StandardCard title="BV SEO" text="Pagination Detected"/>
+          </div>
+          <div className='col s3'></div>
+        </div>
+
       </div>
     );
   }
