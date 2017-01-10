@@ -24,7 +24,14 @@
 }
 
 .icon {
-  color: #00AB8E;
   float: right;
   margin-right: 15px;
+}
+
+.icon-success {
+  color: #00AB8E;
+}
+
+.icon-error {
+  color: red;
 }

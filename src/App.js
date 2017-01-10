@@ -41,7 +41,7 @@ class App extends Component {
         <div className="row">
           <div className="col s1"></div>
           <div className="col s10">
-            <StandardCard title='Implementation Last Modified' text={this.state.data["Last Modified"] ? this.state.data["Last Modified"].msg : " "}/>
+            <StandardCard title='Implementation Last Modified' text={this.state.data["Last Modified"] ? this.state.data["Last Modified"].msg : " "} badge={this.state.data["Last Modified"] ? "success" : "error"} />
           </div>
           <div className="col s1"></div>
         </div>
@@ -49,10 +49,10 @@ class App extends Component {
         { /* Container Page Cards */ }
         <div className='row'>
           <div className='col s6'>
-            <StandardCard title="Staging Container Page" text={this.state.data["Staging Container URL"] ? this.state.data["Staging Container URL"].msg : " "} />
+            <StandardCard title="Staging Container Page" text={this.state.data["Staging Container URL"] ? this.state.data["Staging Container URL"].msg : " "} badge={this.state.data["Staging Container URL"] ? "success" : "error"}/>
           </div>
           <div className='col s6'>
-            <StandardCard title="Production Container Page" text={this.state.data["Production Container URL"] ? this.state.data["Staging Container URL"].msg : " "} />
+            <StandardCard title="Production Container Page" text={this.state.data["Production Container URL"] ? this.state.data["Production Container URL"].msg : " "} badge={this.state.data["Production Container URL"] ? 'success' : "error"} />
           </div>
         </div>
 
@@ -60,7 +60,7 @@ class App extends Component {
         <div className='row'>
         <div className="col s1"></div>
         <div className="col s10">
-          <StandardCard title='BV Loader' text={this.state.data["Javascript URL"] ? this.state.data["Javascript URL"].msg : " "}/>
+          <StandardCard title='BV Loader' text={this.state.data["Javascript URL"] ? this.state.data["Javascript URL"].msg : " "} badge={this.state.data["Javascript URL"] ? "success" : "error"}/>
         </div>
         <div className="col s1"></div>
         </div>
@@ -68,13 +68,13 @@ class App extends Component {
         { /* PDP Cards */ }
         <div className="row">
           <div className="col s4">
-            <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Loading"] ? "BVSummary Div Detected" : " "}/>
+            <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Loading"] ? "BVSummary Div Detected" : " "} badge={this.state.data["BVRRSummary Container Loading"] ? "success" : "error"} />
           </div>
           <div className="col s4">
-            <StandardCard title="BVRR" text={this.state.data["BVRR Container Loading"] ? "BVRR Div Detected" : " "}/>
+            <StandardCard title="BVRR" text={this.state.data["BVRR Container Loading"] ? "BVRR Div Detected" : " "} badge={this.state.data["BVRR Container Loading"] ? "success" : "error"} />
           </div>
           <div className="col s4">
-            <StandardCard title="BVQA" text={this.state.data["BVQA Container Loading"] ? "BVQA Div Detected" : " "}/>
+            <StandardCard title="BVQA" text={this.state.data["BVQA Container Loading"] ? "BVQA Div Detected" : " "} badge={this.state.data["BVQA Container Loading"] ? "sucess" : "failure"} />
           </div>
         </div>
 
@@ -82,7 +82,7 @@ class App extends Component {
         <div className='row'>
           <div className='col s3'></div>
           <div className='col s6'>
-            <StandardCard title="BV SEO" text={this.state.data["SEO Content Loading"] ? "SEO Content Loading" : " "} />
+            <StandardCard title="BV SEO" text={this.state.data["SEO Content Loading"] ? "SEO Content Loading" : " "} badge={this.state.data["SEO Content Loading"] ? "success" : "error"} />
           </div>
           <div className='col s3'></div>
         </div>
