@@ -26,8 +26,17 @@ class App extends Component {
             <StandardCard title="Staging Container Page" text="https://display.ugc.bazaarvoice.com/bvstaging/static/Apples/ApplesCRM/en_US/container.htm?" />
           </div>
           <div className='col s6'>
-            <StandardCard title="Production Container Page" text="https://display.ugc.bazaarvoice.com/bvstaging/static/Apples/ApplesCRM/en_US/container.htm?" />
+            <StandardCard title="Production Container Page" text="https://display.ugc.bazaarvoice.com/static/Apples/ApplesCRM/en_US/container.htm?" />
           </div>
+        </div>
+
+        { /* BvLoader Card */ }
+        <div className='row'>
+        <div className="col s1"></div>
+        <div className="col s10">
+          <StandardCard title='BV Loader' text='https://display.ugc.bazaarvoice.com/bvstaging/static/ClientName/en_US/bvapi.js'/>
+        </div>
+        <div className="col s1"></div>
         </div>
 
       </div>
