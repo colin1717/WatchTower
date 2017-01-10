@@ -27,7 +27,7 @@ class App extends Component {
         <div className="row">
           <div className="col s1"></div>
           <div className="col s10">
-            <StandardCard title='Implementation Last Modified' text='some date'/>
+            <StandardCard title='Implementation Last Modified' text='2017-01-10T00:39:48.074+0000'/>
           </div>
           <div className="col s1"></div>
         </div>
