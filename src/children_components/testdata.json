@@ -1,0 +1,84 @@
+[{
+    "title": "Most Recent Implementation",
+    "msg": "fbba76e4-d566-4c44-88e6-01b96703cf1f",
+    "status": true
+}, {
+    "title": "Last Modified",
+    "msg": "2017-01-10T00:39:48.074+0000",
+    "status": true
+}, {
+    "title": "Production Container URL",
+    "msg": "https://www.craftsy.com/bazaarvoice-container.html",
+    "status": true
+}, {
+    "title": "Staging Container URL",
+    "msg": "https://craftsy.test.sympoz.net/bazaarvoice-container-stg.html",
+    "status": true
+}, {
+    "title": "PIE Enable",
+    "status": true
+}, {
+    "title": "Follow Up PIE Enabled",
+    "status": true
+}, {
+    "title": "QA Enabled",
+    "status": false
+}, {
+    "title": "Javascript Present",
+    "msg": "Javascript loaded on page",
+    "status": true
+}, {
+    "title": "Javascript URL",
+    "msg": "display.ugc.bazaarvoice.com/static/craftsy/en_US/bvapi.js",
+    "status": true
+}, {
+    "title": "Javascript Name Match",
+    "msg": "",
+    "status": true
+}, {
+    "title": "Javascript Environment",
+    "msg": "Production",
+    "status": true
+}, {
+    "title": "Javascript Server Response",
+    "msg": 200,
+    "status": true
+}, {
+    "title": "BVRR Container Loading",
+    "msg": "",
+    "status": true
+}, {
+    "title": "BVRR
+    Container Has Content ", "
+    msg ": "
+    ", "
+    status ": true}, {"
+    title ": "
+    BVRRSummary Container Loading ", "
+    msg ": "
+    ", "
+    status ": true}, {"
+    title ": "
+    BVRRSummary Container Has Content ", "
+    msg ": "
+    ", "
+    status ": true}, {"
+    title ": "
+    BVQA Container Loading ", "
+    msg ": "
+    ", "
+    status ":
+    false
+}, {
+    "title": "BVQA Container Has Content",
+    "msg": "",
+    "status": false
+}, {
+    "title": "SEO Content Loading",
+    "msg": "",
+    "status": false
+}, {
+    "title": "SEO Pagination Working",
+    "msg": "",
+    "status": false
+}]
