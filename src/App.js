@@ -4,6 +4,7 @@ import ClientDropdown from './children_components/ClientDropdown.js';
 import StandardCard from './children_components/StandardCard.js';
 import './App.css';
 import $ from 'jquery';
+import * as sortData from "./sortData";
 
 class App extends Component {
 
@@ -13,122 +14,8 @@ class App extends Component {
     $.ajax({
       method: "GET",
       url: `http://127.0.0.1:8000/clients/${client}`,
-      success: (data) => { this._sortData(data) }
+      success: (data) => { sortData.sortData(data) }
     })
-  }
-
-  _sortData(data) {
-    console.log('sortData is running');
-    let sortedData = {};
-
-    sortedData["Last Modified"] = this._findImplementation(data);
-    sortedData["Production Container URL"] = this._findProdContainerPage(data);
-    sortedData["Staging Container URL"] = this._findStagingContainerPage(data);
-    sortedData["Javascript URL"] = this._findBVLoader(data);
-    sortedData["BVRRSummary Container Loading"] = this._findBVRRSummary(data);
-    sortedData["BVRRSummary Container Has Content"] = this._findBVRRSummaryPopulating(data);
-    sortedData["BVRR Container Loading"] = this._findBVRR(data);
-    sortedData["BVRR Container Has Content"] = this._findBVRRPopulating(data);
-    sortedData["BVQA Container Loading"] = this._findBVQA(data);
-    sortedData["BVQA Container Has Content"] = this._findBVQAPopulating(data);
-    sortedData["SEO Content Loading"] = this._findSEO(data);
-    sortedData["SEO Pagination Working"] = this._findSEOPagination(data);
-
-    console.log(sortedData);
-  }
-
-  _findImplementation(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "Last Modified") {
-        return data[i];
-      }
-    }
-  }
-  _findProdContainerPage(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "Production Container URL"){
-        return data[i];
-      }
-    }
-  }
-  _findStagingContainerPage(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "Staging Container URL") {
-        return data[i];
-      }
-    }
-  }
-
-  _findBVLoader(data) {
-    for (var i = 0; i < data.length; i++)  {
-      if (data[i].title === "Javascript URL") {
-        return data[i];
-      }
-    }
-  }
-
-  _findBVRRSummary(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVRRSummary Container Loading") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findBVRRSummaryPopulating(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVRRSummary Container Has Content") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findBVRR(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVRR Container Loading") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findBVRRPopulating(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVRR Container Has Content") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findBVQA(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVQA Container Loading") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findBVQAPopulating(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "BVQA Container Has Content") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findSEO(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "SEO Content Loading") {
-        return data[i].status;
-      }
-    }
-  }
-
-  _findSEOPagination(data) {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].title === "SEO Pagination Working") {
-        return data[i].status;
-      }
-    }
   }
 
   render() {
