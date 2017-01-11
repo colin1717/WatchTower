@@ -41,7 +41,7 @@ class App extends Component {
         <div className="row">
           <div className="col s1"></div>
           <div className="col s10">
-            <StandardCard title='Implementation Last Modified' text={this.state.data["Last Modified"] ? this.state.data["Last Modified"].msg : "No Implementation initialized"} badge={this.state.data["Last Modified"] ? "success" : "error"} />
+            <StandardCard title='Implementation Last Modified' text={this.state.data["Last Modified"] ? this.state.data["Last Modified"].msg : "No implementation initialized"} badge={this.state.data["Last Modified"] ? "success" : "error"} />
           </div>
           <div className="col s1"></div>
         </div>
@@ -68,13 +68,13 @@ class App extends Component {
         { /* PDP Cards */ }
         <div className="row">
           <div className="col s4">
-            <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Loading"] ? "BVSummary Div Detected" : "BVSummary Div is not Detected"} badge={this.state.data["BVRRSummary Container Loading"] ? "success" : "error"} />
+            <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Has Content"] ? "BVRRSummary Div detected and has content" : (this.state.data["BVRRSummary Container Loading"] ? "BVRRSummary div detected without content" : "BVRRSummary div not detected")} badge={this.state.data["BVRRSummary Container Loading"] ? "success" : "error"} />
           </div>
           <div className="col s4">
-            <StandardCard title="BVRR" text={this.state.data["BVRR Container Loading"] ? "BVRR Div Detected" : "BVRR Div is not detected"} badge={this.state.data["BVRR Container Loading"] ? "success" : "error"} />
+            <StandardCard title="BVRR" text={this.state.data["BVRR Container Has Content"] ? "BVRR Div detected and has content" : (this.state.data["BVRR Container Loading"] ? "BVRR div detected without content" : "BVRR div not detected")} badge={this.state.data["BVRR Container Loading"] ? "success" : "error"} />
           </div>
           <div className="col s4">
-            <StandardCard title="BVQA" text={this.state.data["BVQA Container Loading"] ? "BVQA Div Detected" : "BVQA Div is not detected"} badge={this.state.data["BVQA Container Loading"] ? "sucess" : "failure"} />
+            <StandardCard title="BVQA" text={this.state.data["BVQA Container Has Content"] ? "BVQA Div detected and has content" : (this.state.data["BVQA Container Loading"] ? "BVQA div detected without content" : "BVQA div not detected")} badge={this.state.data["BVQA Container Loading"] ? "sucess" : "failure"} />
           </div>
         </div>
 
@@ -82,7 +82,7 @@ class App extends Component {
         <div className='row'>
           <div className='col s3'></div>
           <div className='col s6'>
-            <StandardCard title="BV SEO" text={this.state.data["SEO Pagination Working"] ? "SEO Content Loading" : (this.state.data["SEO Content Loading"] ? "SEO Content Loading" : "SEO content is not detected")} badge={this.state.data["SEO Content Loading"] ? "success" : "error"} />
+            <StandardCard title="BV SEO" text={this.state.data["SEO Pagination Working"] ? "SEO Content and Pagination detected" : (this.state.data["SEO Content Loading"] ? "SEO Content Loading" : "SEO content is not detected")} badge={this.state.data["SEO Pagination Working"] ? "success" : (this.state.data["SEO Content Loading"] ? "success" : "error")} />
           </div>
           <div className='col s3'></div>
         </div>
