@@ -13,7 +13,7 @@ class ImplementationModCard extends Component {
               <span className='icon'>{ (this.props.badge === 'success') ? <i className="material-icons icon-success">done</i> : <i className="material-icons icon-error">warning</i> }</span>
             </div>
             <div className='standard-card-bottom'>
-              <span className='standard-card-text'>{this.props.text}</span>
+              <span className='standard-card-text'>{ (this.props.badge === "success") ? this.props.text : <span className='text-error'>{this.props.text}</span>}</span>
             </div>
           </div>
       </div>
