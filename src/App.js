@@ -60,7 +60,7 @@ class App extends Component {
         <div className='row'>
         <div className="col s1"></div>
         <div className="col s10">
-          <StandardCard title='BV Loader' text={this.state.data["Javascript URL"] ? this.state.data["Javascript URL"].msg : "The BVAPI file is not detected on this page"} badge={this.state.data["Javascript URL"] ? "success" : "error"}/>
+          <StandardCard title='BV Loader' text={this.state.data["Javascript URL"] ? (!this.state.data["Javascript URL"].msg ?  "The BVAPI file is not detected on this page" : this.state.data["Javascript URL"].msg ) : " "} badge={this.state.data["Javascript URL"] ? "success" : "error"}/>
         </div>
         <div className="col s1"></div>
         </div>
