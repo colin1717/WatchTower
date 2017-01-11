@@ -82,7 +82,7 @@ class App extends Component {
         <div className='row'>
           <div className='col s3'></div>
           <div className='col s6'>
-            <StandardCard title="BV SEO" text={this.state.data["SEO Content Loading"] ? "SEO Content Loading" : " "} badge={this.state.data["SEO Content Loading"] ? "success" : "error"} />
+            <StandardCard title="BV SEO" text={this.state.data["SEO Pagination Working"] ? "SEO Content Loading" : (this.state.data["SEO Content Loading"] ? "SEO Content Loading" : "SEO content is not detected")} badge={this.state.data["SEO Content Loading"] ? "success" : "error"} />
           </div>
           <div className='col s3'></div>
         </div>
