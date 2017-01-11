@@ -4,7 +4,6 @@ import './css/standardcard.css';
 class ImplementationModCard extends Component {
 
   render() {
-    let badge;
     return (
       <div>
           <div className='standard-card z-depth-1'>
