@@ -72,13 +72,13 @@ class App extends Component {
 
       <div className="row">
         <div className="col s4">
-          <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Has Content"] ? "BVRRSummary Div detected and has content" : (this.state.data["BVRRSummary Container Loading"] ? "BVRRSummary div detected without content" : "BVRRSummary div not detected")} badge={this.state.data["BVRRSummary Container Loading"] ? "success" : "error"} />
+          <StandardCard title="BVRRSummary" text={this.state.data["BVRRSummary Container Has Content"] ? "BVRRSummary Div detected and has content" : (this.state.data["BVRRSummary Container Loading"] ? "BVRRSummary div detected without content" : "BVRRSummary div not detected")} badge={this.state.data["BVRRSummary Container Has Content"] ? "success" : "error"} />
         </div>
         <div className="col s4">
-          <StandardCard title="BVRR" text={this.state.data["BVRR Container Has Content"] ? "BVRR Div detected and has content" : (this.state.data["BVRR Container Loading"] ? "BVRR div detected without content" : "BVRR div not detected")} badge={this.state.data["BVRR Container Loading"] ? "success" : "error"} />
+          <StandardCard title="BVRR" text={this.state.data["BVRR Container Has Content"] ? "BVRR Div detected and has content" : (this.state.data["BVRR Container Loading"] ? "BVRR div detected without content" : "BVRR div not detected")} badge={this.state.data["BVRR Container Has Content"] ? "success" : "error"} />
         </div>
         <div className="col s4">
-          <StandardCard title="BVQA" text={this.state.data["BVQA Container Has Content"] ? "BVQA Div detected and has content" : (this.state.data["BVQA Container Loading"] ? "BVQA div detected without content" : "BVQA div not detected")} badge={this.state.data["BVQA Container Loading"] ? "sucess" : "failure"} />
+          <StandardCard title="BVQA" text={this.state.data["BVQA Container Has Content"] ? "BVQA Div detected and has content" : (this.state.data["BVQA Container Loading"] ? "BVQA div detected without content" : "BVQA div not detected")} badge={this.state.data["BVQA Container Has Content"] ? "sucess" : "error"} />
         </div>
       </div>
 
