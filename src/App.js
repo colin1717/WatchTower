@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './children_components/Header.js';
 import ClientDropdown from './children_components/ClientDropdown.js';
 import StandardCard from './children_components/StandardCard.js';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './App.css';
 import $ from 'jquery';
 import * as sortData from "./sortData";
@@ -92,12 +93,20 @@ class App extends Component {
       </div>
     }
 
+    const transitionOptions = {
+      transitionName: 'fade',
+      transitionEnterTimeout: 500,
+      transitionLeaveTimeout: 500
+    }
+
     return (
       <div className="App">
         <Header />
         <ClientDropdown fetchData={this._fetchData.bind(this)}/>
 
-        {cardSection}
+        <ReactCSSTransitionGroup {...transitionOptions}>
+          {cardSection}
+        </ReactCSSTransitionGroup>
 
       </div>
     );

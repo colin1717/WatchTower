@@ -52,7 +52,7 @@ export function findBVLoader(data) {
 export function findBVRRSummary(data) {
   for (var i = 0; i < data.length; i++) {
     if (data[i].title === "BVRRSummary Container Loading") {
-      data[i].status;
+      return data[i].status;
     }
   }
 }
